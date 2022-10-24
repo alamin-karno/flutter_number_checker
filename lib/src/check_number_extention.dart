@@ -1,6 +1,8 @@
-class FlutterNumberChecker {
-  // is prime number
-  bool isPrimeNumber(num n) {
+extension CheckNumberExtention on num {
+  // [Check number is prime or not]
+  bool get isPrimeNumber => _isPrimeNumber(this);
+
+  bool _isPrimeNumber(num n) {
     if (n < 4 && n > 1) {
       return true;
     } else {
