@@ -36,6 +36,12 @@ dependencies:
   flutter_number_checker : ^{latest version}
 ```
 
+or run this command:
+
+```bash
+ flutter pub add flutter_number_checker
+ ```
+
 Add the following imports to your Dart code/ Flutter Code:
 
 ```dart
@@ -59,6 +65,109 @@ Will add longer examples into `/example` folder.
   print(isPrime2); // false
 ```
 
+ - ## Check number is prime number or not on flutter:
+   - First, you need to import the package:
+   
+ ```dart
+  import 'package:flutter_number_checker/flutter_number_checker.dart';
+```
+
+   - Create a project decleare HomeScreen as a StatefulWidget:
+
+```dart
+  void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Number Checker',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const HomeScreen(title: 'Flutter Number Checker'),
+    );
+  }
+}
+```
+
+   - Create a variable to store the number you want to check:
+
+```dart
+  class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key, required this.title});
+  final String title;
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  num number = 7;
+  num number2 = 10;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+        centerTitle: true,
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                ' $number is: ',
+                style: Theme.of(context).textTheme.headline4,
+              ),
+              Text(
+                number.isPrimeNumber ? 'PRIME' : 'NOT PRIME',
+                style: Theme.of(context)
+                    .textTheme
+                    .headline4
+                    ?.copyWith(color: Colors.black),
+              ),
+            ],
+          ),
+          const SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                ' $number2 is: ',
+                style: Theme.of(context).textTheme.headline4,
+              ),
+              Text(
+                number2.isPrimeNumber ? 'PRIME' : 'NOT PRIME',
+                style: Theme.of(context)
+                    .textTheme
+                    .headline4
+                    ?.copyWith(color: Colors.black),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+```
+
+  - Run the project and you will see the result:
+
+| Home Screen |
+|:--:|
+| <img src="example/screenshots/flutter_number_check_example.png" width = "250"> |
+
+
 ## Additional information
 
 - [Flutter Number Checker (pub.dev)](https://pub.dev/packages/flutter_number_checker)
@@ -73,12 +182,15 @@ This is a open source project so anyone want to contribute on this proejct is mo
 <p align="center">
 <table align="center">
   <tbody><tr>
-     <td align="center"><a href="https://github.com/alamin-karno"><img alt="" src="https://avatars.githubusercontent.com/alamin-karno" width="125px;"><br><sub><b> Md. Al-Amin </b></sub></a><br></td> </a></td>
+     <td align="center">
+     <a href="https://github.com/alamin-karno">
+     <img alt="Md. Al-Amin" src="https://avatars.githubusercontent.com/alamin-karno" width="125px;"> <br>
+     <sub><b> Md. Al-Amin </b></sub>
+     </a><br></td></tr>
+     </tbody> </table> </p>
 
-</tbody></table>
 
-
-<h3 align=center> ✨VALUABLE CONTRIBUTORS✨ </h3>
+<h3 align="center"> ✨VALUABLE CONTRIBUTORS✨ </h3>
 <p align="center">
 <a href="https://github.com/alamin-karno/flutter_number_checker/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=alamin-karno/flutter_number_checker" />

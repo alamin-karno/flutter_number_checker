@@ -1,5 +1,5 @@
 name: flutter_number_checker
-description: A new Flutter package for checking number easily.
+description: A new flutter package for checking number easily. This package is for checking number is prime or not. In future theire will be more option to check diffrenet number.
 version: 0.0.1
 homepage: https://github.com/alamin-karno/flutter_number_checker
 
