@@ -1,11 +1,9 @@
-import 'package:flutter/material.dart';
-
-extension on num {
+extension CheckNumber on num {
+  // [Check number is prime or not]
   bool get isPrimeNumber => _isPrimeNumber(this);
 
   bool _isPrimeNumber(num n) {
     if (n < 4 && n > 1) {
-      debugPrint("Prime");
       return true;
     } else {
       int primeIterator = 2;
@@ -22,10 +20,8 @@ extension on num {
       }
 
       if (primeFlag) {
-        debugPrint("Prime");
         return true;
       } else {
-        debugPrint("Not Prime");
         return false;
       }
     }

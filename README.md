@@ -10,18 +10,37 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
+# Flutter Number Checker
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A flutter plugin for checking number easily.
+
+Note: This plugin is still under development, and some checking might not be available yet.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Check number is <b>prime number</b> or not
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+ #### Add dependency:
+ Please check the latest version before installation. If there is any problem with the new version, please use the previous version.
+
+
+
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  # add flutter_number_checker
+  flutter_number_checker : ^{latest version}
+```
+
+Add the following imports to your Dart code/ Flutter Code:
+
+```
+import 'package:flutter_number_checker/flutter_number_checker.dart';
+```
 
 ## Usage
 

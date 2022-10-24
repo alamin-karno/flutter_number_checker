@@ -1,7 +1,7 @@
 name: flutter_number_checker
-description: A new Flutter package project.
+description: A new Flutter package for checking number easily.
 version: 0.0.1
-homepage:
+homepage: https://github.com/alamin-karno/flutter_number_checker
 
 environment:
   sdk: '>=2.18.2 <3.0.0'
