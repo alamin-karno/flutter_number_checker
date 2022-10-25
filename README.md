@@ -18,7 +18,40 @@ Note: This plugin is still under development, and some checking might not be ava
 
 ## Features
 
-- Check number is <b>prime number</b> or not
+- Implementing all favorite number checking algorithm: 
+
+| Name | Function | Description | Example |
+| ------------ | ----------- | ----------- | ----------- |
+| Prime Number | isPrimeNumber | A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. | 2, 3, 5 |
+| Even Number | isEvenNumber | An even number is a number that is divisible by 2. | 2, 4, 6 |
+| Odd Number | isOddNumber | An odd number is a number that is not divisible by 2. | 1, 3, 5 |
+| Palindrome Number | isPalindromeNumber | A palindrome number is a number that is the same when read forwards or backwards. | 121, 12321 |
+| Armstrong Number | isArmstrongNumber | An Armstrong number is a number that is equal to the sum of cubes of its digits. | 153, 370, 371, 407 |
+| Perfect Number | isPerfectNumber | A perfect number is a positive integer that is equal to the sum of its proper positive divisors, that is, the sum of its positive divisors excluding the number itself. | 6, 28, 496 |
+| Perfect Square | isPerfectSquare | A perfect square is a number that is the product of some integer with itself. |
+| Perfect Cube | isPerfectCube | A perfect cube is a number that is the product of some integer with itself three times. | 8, 27, 64 |
+| Sad Number | isSadNumber | A sad number is a number that is not a happy number. | 4, 16, 37, 58, 145, 42, 20 |
+| Happy Number | isHappyNumber | A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers, while those that do not end in 1 are unhappy numbers (or sad numbers). | 1, 7, 10, 13 |
+| Square Number | isSquareNumber | A square number is a number that is the product of some integer with itself. | 1, 4, 9, 16, 25  |
+| Cube Number | isCubeNumber | A cube number is a number that is the product of some integer with itself three times. | 8, 27, 64 |
+| Triangular Number | isTriangularNumber | A triangular number is a number of the form n(n+1)/2, where n is a positive integer. | 1, 3, 6, 10, 15, 21, 28 |
+| Harshad Number | isHarshadNumber | A Harshad number is a number that is divisible by the sum of its digits. | 18 |
+| Smith Number | isSmithNumber | A Smith number is a composite number, the sum of whose digits is the sum of the digits of its prime factors obtained as a result of prime factorization (excluding 1). | 4, 22, 27 |
+| Duck Number | isDuckNumber | A duck number is a number which has zeroes present in it, but there should be no zero present in the beginning of the number. | 3210, 7056, 8430709 |
+| Spy Number | isSpyNumber | A spy number is a number whose sum and product of digits are equal. | 123, 1124, 1313 |
+| Automorphic Number | isAutomorphicNumber | An automorphic number is a number whose square "ends" in the same digits as the number itself. | 5, 6, 25, 76, 376, 625 |
+| Neon Number | isNeonNumber | A neon number is a number where the sum of digits of the square of the number is equal to the number itself. | 9, 45, 100, 303, 819 |
+| Strobogrammatic Number | isStrobogrammaticNumber | A strobogrammatic number is a number whose numeral is rotationally symmetric, so that it appears the same when rotated 180 degrees. | 0, 1, 8, 11, 69, 88, 96 |
+| Disarium Number | isDisariumNumber | A disarium number is a number defined by the following process: Starting with a digit in a given base, raise the digit to the power of its position in the number and add it to a running total. Repeat the process with the remaining digits and sum the results. | 135, 518, 598, 1306 |
+| Kaprekar Number | isKaprekarNumber | A Kaprekar number is a non-negative integer, the representation of whose square in a given base can be split into two parts that add up to the original number again. | 45, 55, 99, 297 |
+| Krishnamurthy Number | isKrishnamurthyNumber | A Krishnamurthy number is a number whose sum of the factorial of digits is equal to the number itself. | 145, 40585 |
+| Emirp Number | isEmirpNumber | An emirp number is a prime number that results in a different prime when its digits are reversed. | 13, 17, 31, 37 |
+| Abundant Number | isAbundantNumber | An abundant number is a number for which the sum of its proper divisors is greater than the number itself. | 12, 18, 20, 24 |
+| Deficient Number | isDeficientNumber | A deficient number is a number for which the sum of its proper divisors is less than the number itself. | 2, 4, 6, 8 |
+| Fibonacci Number | isFibonacciNumber | A Fibonacci number is a number in the Fibonacci sequence, characterized by the fact that every number after the first two is the sum of the two preceding ones. | 0, 1, 1, 2, 3, 5 |
+| Factorial Number | isFactorialNumber | A factorial number is a number that is the product of an integer and all the integers below it. | 1, 2, 6, 24, 120 |
+| Circular Prime Number | isCircularPrimeNumber | A circular prime number is a prime number with the property that when rotated by any number of digits, it always results in a prime number. | 2, 3, 5, 7 |
+
 
 ## Getting started
 
@@ -165,7 +198,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
 | Home Screen |
 |:--:|
-| <img src="example/screenshots/flutter_number_check_example.png" width = "250"> |
+| <img src="https://github.com/alamin-karno/flutter_number_checker/blob/master/example/screenshots/flutter_number_check_example.png?raw=true" width = "250"> |
 
 
 ## Additional information
