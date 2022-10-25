@@ -14,6 +14,16 @@ and the Flutter guide for
 
 A flutter plugin for checking number easily.
 
+<p align="center">
+  <a href="https://pub.dev/packages/flutter_number_checker"><img alt="pub version" src="https://img.shields.io/pub/v/flutter_number_checker?color=%2300b0ff&label=flutter_number_checker&style=flat-square"></a>
+  <a href="https://codecov.io/gh/alamin-karno/flutter_number_checker">
+  <img src="https://codecov.io/gh/alamin-karno/flutter_number_checker/branch/master/graph/badge.svg?token=NULL"/>
+  </a>
+  <img alt="last commit" src="https://img.shields.io/github/last-commit/alamin-karno/flutter_number_checker?color=%23ffa000&style=flat-square"/>
+  <img alt="license" src="https://img.shields.io/github/license/alamin-karno/flutter_number_checker?style=flat-square"/>
+  <img alt="stars" src="https://img.shields.io/github/stars/alamin-karno/flutter_number_checker?style=social"/>
+</p>
+
 Note: This plugin is still under development, and some checking might not be available yet.
 
 ## Features
