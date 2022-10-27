@@ -12,7 +12,7 @@ and the Flutter guide for
 -->
 # Flutter Number Checker
 
-A flutter plugin for checking number easily.
+The "Flutter Number Checker" package is for checking favourite number checking algorithms—for example, prime number, the perfect number, Armstrong number, palindrome number, etc.
 
 <p align="center">
   <a href="https://pub.dev/packages/flutter_number_checker"><img alt="pub version" src="https://img.shields.io/pub/v/flutter_number_checker?color=%2300b0ff&label=flutter_number_checker&style=flat-square"></a>
@@ -24,7 +24,7 @@ A flutter plugin for checking number easily.
   <img alt="stars" src="https://img.shields.io/github/stars/alamin-karno/flutter_number_checker?style=social"/>
 </p>
 
-Note: This plugin is still under development, and some checking might not be available yet.
+Note: This plugin is still under development, anyone want to contribute on this project is most welcome. If you have any idea or suggestion, please feel free to contact me.
 
 ## Features
 
@@ -83,7 +83,7 @@ or run this command:
 
 ```bash
  flutter pub add flutter_number_checker
- ```
+```
 
 Add the following imports to your Dart code/ Flutter Code:
 
@@ -93,7 +93,8 @@ import 'package:flutter_number_checker/flutter_number_checker.dart';
 
 ## Usage
 
-Will add longer examples into `/example` folder.
+Add longer examples into `/example` folder. See [example](https://pub.dev/packages/flutter_number_checker/example) for a complete sample app using [flutter_number_checker](https://pub.dev/packages/flutter_number_checker).
+
 
 ```dart
  int number = 7;
@@ -108,17 +109,19 @@ Will add longer examples into `/example` folder.
   print(isPrime2); // false
 ```
 
- - ## Check number is prime number or not on flutter:
-   - First, you need to import the package:
+ ## Check an example on Flutter project:
+  - You need to import this line while using this package:
    
- ```dart
+```dart
   import 'package:flutter_number_checker/flutter_number_checker.dart';
 ```
 
    - Create a project decleare HomeScreen as a StatefulWidget:
 
 ```dart
-  void main() {
+import 'package:flutter/material.dart';
+
+void main() {
   runApp(const MyApp());
 }
 
@@ -141,7 +144,12 @@ class MyApp extends StatelessWidget {
    - Create a variable to store the number you want to check:
 
 ```dart
-  class HomeScreen extends StatefulWidget {
+
+import 'package:flutter/material.dart';
+import 'package:flutter_number_checker/flutter_number_checker.dart';
+
+
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key, required this.title});
   final String title;
 
@@ -162,38 +170,155 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          /// CHECK ON EXTENSION WAY
+          const Text(
+            'EXTENSION WAY',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+
+          /// CHECK PRIME OR NOT
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                ' $number is: ',
-                style: Theme.of(context).textTheme.headline4,
+                ' $number is PRIME: ',
               ),
               Text(
-                number.isPrimeNumber ? 'PRIME' : 'NOT PRIME',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4
-                    ?.copyWith(color: Colors.black),
+                number.isPrimeNumber.toString(),
               ),
             ],
           ),
-          const SizedBox(height: 20),
+
+          /// CHECK FIBONACCI OR NOT
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                ' $number2 is: ',
-                style: Theme.of(context).textTheme.headline4,
+                ' $number is FIBONACCI: ',
               ),
               Text(
-                number2.isPrimeNumber ? 'PRIME' : 'NOT PRIME',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4
-                    ?.copyWith(color: Colors.black),
+                number.isFibonaciNumber.toString(),
+              ),
+            ],
+          ),
+
+          /// CHECK PALINDROME OR NOT
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                ' $number is PALINDROME: ',
+              ),
+              Text(
+                number.isPalindromeNumber.toString(),
+              ),
+            ],
+          ),
+
+          /// CHECK ARMSTRONG OR NOT
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                ' $number is ARMSTRONG: ',
+              ),
+              Text(
+                number.isArmstrongNumber.toString(),
+              ),
+            ],
+          ),
+
+          /// CHECK HAPPY NUMBER OR NOT
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                ' $number is HAPPY NUMBER: ',
+              ),
+              Text(
+                number.isHappyNumber.toString(),
+              ),
+            ],
+          ),
+
+          /// DIVIDER
+          const Divider(),
+
+          /// CHECK NORMAL METHOD WAY
+          const Text(
+            'METHOD WAY',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+
+          /// CHECK PRIME OR NOT
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                ' $number2 is PRIME: ',
+              ),
+              Text(
+                FlutterNumberChecker.isPrimeNumber(number2).toString(),
+              ),
+            ],
+          ),
+
+          /// CHECK FIBONACCI OR NOT
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                ' $number2 is FIBONACCI: ',
+              ),
+              Text(
+                FlutterNumberChecker.isFibonacciNumber(number2).toString(),
+              ),
+            ],
+          ),
+
+          /// CHECK PALINDROME OR NOT
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                ' $number2 is PALINDROME: ',
+              ),
+              Text(
+                FlutterNumberChecker.isPalindromeNumber(number2).toString(),
+              ),
+            ],
+          ),
+
+          /// CHECK ARMSTRONG OR NOT
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                ' $number2 is ARMSTRONG: ',
+              ),
+              Text(
+                FlutterNumberChecker.isArmstrongNumber(number2).toString(),
+              ),
+            ],
+          ),
+
+          /// CHECK HAPPY NUMBER OR NOT
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                ' $number2 is HAPPY NUMBER: ',
+              ),
+              Text(
+                FlutterNumberChecker.isHappyNumber(number2).toString(),
               ),
             ],
           ),
