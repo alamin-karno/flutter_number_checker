@@ -1,94 +1,120 @@
+/* MIT License
+
+Copyright (c) 2022 Md. Al-Amin
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
 import 'package:flutter_number_checker/flutter_number_checker.dart';
 
+/// [CheckNumberExtention] is a extention class for [FlutterNumberChecker] class.
+/// This class make the extention method for [FlutterNumberChecker] class
+
 extension CheckNumberExtention on num {
-  // [Check number is prime or not]
+  /// [isPrimeNumber] is a extention method for [FlutterNumberChecker] class to check number is prime or not.
   bool get isPrimeNumber => FlutterNumberChecker.isPrimeNumber(this);
 
-  // [Check number is even or not]
+  /// [isEvenNumber] is a extention method for [FlutterNumberChecker] class to check number is even or not.
   bool get isEvenNumber => FlutterNumberChecker.isEvenNumber(this);
 
-  // [Check number is odd or not]
+  /// [isOddNumber] is a extention method for [FlutterNumberChecker] class to check number is odd or not.
   bool get isOddNumber => FlutterNumberChecker.isOddNumber(this);
 
-  // [Check number is palindrome or not]
+  /// [isPalindromeNumber] is a extention method for [FlutterNumberChecker] class to check number is palindrome or not.
   bool get isPalindromeNumber => FlutterNumberChecker.isPalindromeNumber(this);
 
-  // [Check number is armstrong or not]
+  /// [isArmstrongNumber] is a extention method for [FlutterNumberChecker] class to check number is armstrong or not.
   bool get isArmstrongNumber => FlutterNumberChecker.isArmstrongNumber(this);
 
-  // [Check number is perfect square or not]
-  bool get isPerfectSquare => FlutterNumberChecker.isPerfectSquare(this);
-
-  // [Check number is perfect number or not]
+  /// [isPerfectNumber] is a extention method for [FlutterNumberChecker] class to check number is perfect or not.
   bool get isPerfectNumber => FlutterNumberChecker.isPerfectNumber(this);
 
-  // [Check number is perfect cube or not]
+  /// [isPerfectSquare] is a extention method for [FlutterNumberChecker] class to check number is perfect square or not.
+  bool get isPerfectSquare => FlutterNumberChecker.isPerfectSquare(this);
+
+  /// [isPerfectCube] is a extention method for [FlutterNumberChecker] class to check number is perfect cube or not.
   bool get isPerfectCube => FlutterNumberChecker.isPerfectCube(this);
 
-  // [Check number is happy number or not]
+  /// [isHappyNumber] is a extention method for [FlutterNumberChecker] class to check number is happy or not.
   bool get isHappyNumber => FlutterNumberChecker.isHappyNumber(this);
 
-  // [Check number is sad number or not]
+  /// [isSadNumber] is a extention method for [FlutterNumberChecker] class to check number is sad or not.
   bool get isSadNumber => FlutterNumberChecker.isSadNumber(this);
 
-  // [Check number is square number or not]
+  /// [isSquareNumber] is a extention method for [FlutterNumberChecker] class to check number is square or not.
   bool get isSquareNumber => FlutterNumberChecker.isSquareNumber(this);
 
-  // [Check number is triangular number or not]
+  /// [isTriangularNumber] is a extention method for [FlutterNumberChecker] class to check number is triangular or not.
   bool get isTriangularNumber => FlutterNumberChecker.isTriangularNumber(this);
 
-  // [Check number is cube number or not]
+  /// [isCubeNumber] is a extention method for [FlutterNumberChecker] class to check number is cube or not.
   bool get isCubeNumber => FlutterNumberChecker.isCubeNumber(this);
 
-  // [Check number is harshad number or not]
+  /// [isHarshadNumber] is a extention method for [FlutterNumberChecker] class to check number is harshad or not.
   bool get isHarshadNumber => FlutterNumberChecker.isHarshadNumber(this);
 
-  // [Check number is smith number or not]
+  /// [isSmithNumber] is a extention method for [FlutterNumberChecker] class to check number is smith or not.
   bool get isSmithNumber => FlutterNumberChecker.isSmithNumber(this);
 
-  // [Check number is duck number or not]
+  /// [isDuckNumber] is a extention method for [FlutterNumberChecker] class to check number is duck or not.
   bool get isDuckNumber => FlutterNumberChecker.isDuckNumber(this);
 
-  // [Check number is spy number or not]
+  /// [isSpyNumber] is a extention method for [FlutterNumberChecker] class to check number is spy or not.
   bool get isSpyNumber => FlutterNumberChecker.isSpyNumber(this);
 
-  // [Check number is neon number or not]
+  /// [isNeonNumber] is a extention method for [FlutterNumberChecker] class to check number is neon or not.
   bool get isNeonNumber => FlutterNumberChecker.isNeonNumber(this);
 
-  // [Check number is automorphic number or not]
+  /// [isAutomorphicNumber] is a extention method for [FlutterNumberChecker] class to check number is automorphic or not.
   bool get isAutomorphicNumber =>
       FlutterNumberChecker.isAutomorphicNumber(this);
 
-  // [Check number is strobogrammatic number or not]
+  /// [isStrobogrammaticNumber] is a extention method for [FlutterNumberChecker] class to check number is strobogrammatic or not.
   bool get isStrobogrammaticNumber =>
       FlutterNumberChecker.isStrobogrammaticNumber(this);
 
-  // [Check number is disarium number or not]
+  /// [isDisariumNumber] is a extention method for [FlutterNumberChecker] class to check number is disarium or not.
   bool get isDisariumNumber => FlutterNumberChecker.isDisariumNumber(this);
 
-  // [Check number is kaprekar number or not]
+  /// [isKaprekarNumber] is a extention method for [FlutterNumberChecker] class to check number is kaprekar or not.
   bool get isKaprekarNumber => FlutterNumberChecker.isKaprekarNumber(this);
 
-  // [Check number is krishnamurthy number or not]
+  /// [isKrishnamurthyNumber] is a extention method for [FlutterNumberChecker] class to check number is krishnamurthy or not.
   bool get isKrishnamurthyNumber =>
       FlutterNumberChecker.isKrishnamurthyNumber(this);
 
-  // [Check number is emirp number or not]
+  /// [isEmirpNumber] is a extention method for [FlutterNumberChecker] class to check number is emirp or not.
   bool get isEmirpNumber => FlutterNumberChecker.isEmirpNumber(this);
 
-  // [Check number is abundant number or not]
+  /// [isAbundantNumber] is a extention method for [FlutterNumberChecker] class to check number is abundant or not.
   bool get isAbundantNumber => FlutterNumberChecker.isAbundantNumber(this);
 
-  // [Check number is deficient number or not]
+  /// [isDeficientNumber] is a extention method for [FlutterNumberChecker] class to check number is deficient or not.
   bool get isDeficientNumber => FlutterNumberChecker.isDeficientNumber(this);
 
-  // [Check number is fibonacci number or not]
-  bool get isFibonaciNumber => FlutterNumberChecker.isFibonacciNumber(this);
+  /// [isFibonacciNumber] is a extention method for [FlutterNumberChecker] class to check number is fibonacci or not.
+  bool get isFibonacciNumber => FlutterNumberChecker.isFibonacciNumber(this);
 
-  // [Check number is factorial number or not]
+  /// [isFactorialNumber] is a extention method for [FlutterNumberChecker] class to check number is factorial or not.
   bool get isFactorialNumber => FlutterNumberChecker.isFactorialNumber(this);
 
-  // [Check number is circular prime number or not]
+  /// [isCircularPrimeNumber] is a extention method for [FlutterNumberChecker] class to check number is circular prime or not.
   bool get isCircularPrimeNumber =>
       FlutterNumberChecker.isCircularPrimeNumber(this);
 }

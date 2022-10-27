@@ -1,7 +1,35 @@
+/* MIT License
+
+Copyright (c) 2022 Md. Al-Amin
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
 import 'dart:math';
 
+///  [FlutterNumberChecker] is a static library/class to check number is prime, even, odd,
+/// palindrome, armstrong, perfect square, perfect number, perfect cube,
+/// happy number, sad number, square number, triangular number, cube number,
+/// harshad number, smith number, duck number, spy number, neon number, automorphic number etc.
+
 class FlutterNumberChecker {
-  // is prime number
+  /// [isPrimeNumber] check number is prime or not
   static bool isPrimeNumber(num n) {
     if (n < 4 && n > 1) {
       return true;
@@ -26,7 +54,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is even number
+  /// [isEvenNumber] check number is even or not
   static bool isEvenNumber(num n) {
     if (n % 2 == 0) {
       return true;
@@ -35,7 +63,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is odd number
+  /// [isOddNumber] check number is odd or not
   static bool isOddNumber(num n) {
     if (n % 2 == 0) {
       return false;
@@ -44,7 +72,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is palindrome number
+  /// [isPalindromeNumber] check number is palindrome or not
   static bool isPalindromeNumber(num n) {
     String numString = n.toString();
     String reverseNumString = numString.split('').reversed.join();
@@ -56,7 +84,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is armstrong number
+  /// [isArmstrongNumber] check number is armstrong or not
   static bool isArmstrongNumber(num n) {
     String numString = n.toString();
     int numLength = numString.length;
@@ -74,7 +102,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is perfect number
+  /// [isPerfectNumber] check number is perfect number or not
   static bool isPerfectNumber(num n) {
     int sum = 0;
 
@@ -91,7 +119,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is perfect square
+  /// [isPerfectSquare] check number is perfect square or not
   static bool isPerfectSquare(num n) {
     double sqrtNum = sqrt(n);
 
@@ -102,7 +130,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is perfect cube
+  // [isPerfectCube] check number is perfect cube or not
   static bool isPerfectCube(num n) {
     double cubeRootNum = pow(n, 1 / 3).toDouble();
 
@@ -113,7 +141,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is happy number
+  /// [isHappyNumber] check number is happy number or not
   static bool isHappyNumber(num n) {
     int sum = 0;
     int count = 0;
@@ -139,7 +167,7 @@ class FlutterNumberChecker {
     }
   }
 
-  //is sad number
+  /// [isSadNumber] check number is sad number or not
   static bool isSadNumber(num n) {
     int sum = 0;
     int count = 0;
@@ -165,7 +193,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is fibonacci number
+  /// [isFibonacciNumber] check number is fibonacci number or not
   static bool isFibonacciNumber(num n) {
     int a = 0;
     int b = 1;
@@ -184,7 +212,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is square number
+  /// [isSquareNumber] check number is square number or not
   static bool isSquareNumber(num n) {
     int a = 0;
     int b = 1;
@@ -203,7 +231,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is triangular number
+  /// [isTriangularNumber] check number is triangular number or not
   static bool isTriangularNumber(num n) {
     int sum = 0;
 
@@ -218,7 +246,7 @@ class FlutterNumberChecker {
     return false;
   }
 
-  // is cube number
+  /// [isCubeNumber] check number is cube number or not
   static bool isCubeNumber(num n) {
     int a = 0;
     int b = 1;
@@ -237,7 +265,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is harshad number
+  /// [isHarshadNumber] check number is harshad number or not
   static bool isHarshadNumber(num n) {
     String numString = n.toString();
     int numLength = numString.length;
@@ -255,7 +283,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is smith number
+  /// [isSmithNumber] check number is smith number or not
   static bool isSmithNumber(num n) {
     String numString = n.toString();
     int numLength = numString.length;
@@ -289,7 +317,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is duck number
+  /// [isDuckNumber] check number is duck number or not
   static bool isDuckNumber(num n) {
     String numString = n.toString();
 
@@ -300,7 +328,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is spy number
+  /// [isSpyNumber] check number is spy number or not
   static bool isSpyNumber(num n) {
     String numString = n.toString();
     int numLength = numString.length;
@@ -320,7 +348,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is neon number
+  /// [isNeonNumber] check number is neon number or not
   static bool isNeonNumber(num n) {
     int square = (n * n).toInt();
     String squareString = square.toString();
@@ -339,7 +367,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is automorphic number
+  /// [isAutomorphicNumber] check number is automorphic number or not
   static bool isAutomorphicNumber(num n) {
     int square = (n * n).toInt();
     String squareString = square.toString();
@@ -352,7 +380,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is strobogrammatic number
+  /// [isStrobogrammaticNumber] check number is strobogrammatic number or not
   static bool isStrobogrammaticNumber(num n) {
     String numString = n.toString();
     int numLength = numString.length;
@@ -369,7 +397,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is kaprekar number
+  /// [isKaprekarNumber] check number is kaprekar number or not
   static bool isKaprekarNumber(num n) {
     int square = (n * n).toInt();
     String squareString = square.toString();
@@ -388,7 +416,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is disarium number
+  /// [isDisariumNumber] check number is disarium number or not
   static bool isDisariumNumber(num n) {
     String numString = n.toString();
     int numLength = numString.length;
@@ -406,7 +434,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is krishnamurthy number
+  /// [isKrishnamurthyNumber] check number is krishnamurthy number or not
   static bool isKrishnamurthyNumber(num n) {
     String numString = n.toString();
     int numLength = numString.length;
@@ -428,7 +456,7 @@ class FlutterNumberChecker {
     return n == 1 ? 1 : n * factorial(n - 1);
   }
 
-  // is emirp number
+  /// [isEmirpNumber] check number is emirp number or not
   static bool isEmirpNumber(num n) {
     if (isPrimeNumber(n)) {
       String numString = n.toString();
@@ -451,7 +479,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is abundant number
+  /// [isAbundantNumber] check number is abundant number or not
   static bool isAbundantNumber(num n) {
     int sum = 0;
 
@@ -468,7 +496,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is deficient number
+  /// [isDeficientNumber] check number is deficient number or not
   static bool isDeficientNumber(num n) {
     int sum = 0;
 
@@ -485,7 +513,7 @@ class FlutterNumberChecker {
     }
   }
 
-  // is factorial number
+  /// [isFactorialNumber] check number is factorial number or not
   static bool isFactorialNumber(num n) {
     int sum = 0;
 
@@ -500,7 +528,7 @@ class FlutterNumberChecker {
     return false;
   }
 
-  // is circular prime number
+  /// [isCircularPrimeNumber] check number is circular prime number or not
   static bool isCircularPrimeNumber(num n) {
     String numString = n.toString();
     int numLength = numString.length;

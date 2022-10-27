@@ -1,3 +1,12 @@
+## 0.1.1
+
+* Add proper documentation
+* Change pacakge short description
+* Chnage `CHANGELOG.md`
+* Add more examples on examples folder
+* Change  `README.md` with more examples
+* Add `LICENSE` text on each file
+
 ## 0.1.0
 
 * Check even or odd number
