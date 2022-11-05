@@ -29,29 +29,57 @@ import 'dart:math';
 /// harshad number, smith number, duck number, spy number, neon number, automorphic number etc.
 
 class FlutterNumberChecker {
-  /// [isPrimeNumber] check number is prime or not
-  static bool isPrimeNumber(num n) {
-    if (n < 4 && n > 1) {
+  /// [isPrimeNumber] check number is prime or not.
+  /// Optional parameter k to choose number of tests to run.
+  /// (Default is 40 giving error chance of 2^-80)
+  ///
+  ///Miller Rabin primality test adapted from
+  /// William F. Yeng's python implementation
+  static bool isPrimeNumber(int numberToCheck, {int k = 40}) {
+    List<int> smallPrimes = [1, 2, 3];
+    if (numberToCheck == 0) {
+      return false;
+    }
+    if (smallPrimes.contains(numberToCheck)) {
       return true;
-    } else {
-      bool primeFlag = true;
-      int halfOfNum = n ~/ 2;
-
-      for (int primeIterator = 2; primeIterator < halfOfNum; primeIterator++) {
-        if (n % primeIterator == 0) {
-          primeFlag = false;
-          break;
-        } else {
-          primeFlag = true;
-        }
-      }
-
-      if (primeFlag) {
-        return true;
+    }
+    for (int i = 1; i < k; i++) {
+      int witness = 0;
+      if (numberToCheck > pow(2, 32)) {
+        witness = Random().nextInt(pow(2, 32) as int);
       } else {
+        witness = Random().nextInt(numberToCheck - 3) + 2;
+      }
+      if (_singleTest(numberToCheck, witness) == false) {
         return false;
       }
     }
+    return true;
+  }
+
+  /// single test function for isPrimeNumber
+  static bool _singleTest(int numberToCheck, int witness) {
+    int exponent = numberToCheck - 1;
+
+    // bitwise even check
+    while ((exponent & 1) == 0) {
+      // bitwise divide by 2
+      exponent >>= 1;
+    }
+
+    if (witness.modPow(exponent, numberToCheck) == 1) {
+      return true;
+    }
+
+    while (exponent < numberToCheck - 1) {
+      if (witness.modPow(exponent, numberToCheck) == numberToCheck - 1) {
+        return true;
+      }
+      // bitwise multiple by 2
+      exponent <<= 1;
+    }
+
+    return false;
   }
 
   /// [isEvenNumber] check number is even or not
