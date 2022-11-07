@@ -36,7 +36,7 @@ class FlutterNumberChecker {
   ///Miller Rabin primality test adapted from
   /// William F. Yeng's python implementation
   static bool isPrimeNumber(int numberToCheck, {int k = 40}) {
-    List<int> smallPrimes = [1, 2, 3];
+    List<int> smallPrimes = [2, 3];
     if (numberToCheck == 0) {
       return false;
     }
